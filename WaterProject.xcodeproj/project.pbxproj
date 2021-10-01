@@ -44,7 +44,7 @@
 		AD9A0CA52707A7AF00B7D708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD9A0CA72707A7B600B7D708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9A0CAA2707A7B600B7D708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD9A0CAC2707A7B600B7D708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/michaelveit/Desktop/Development/WaterProject/WaterProject/SupportingFiles/Info.plist; sourceTree = "<absolute>"; };
+		AD9A0CAC2707A7B600B7D708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = WaterProject/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		AD9A0CB12707A7B700B7D708 /* WaterProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9A0CB52707A7B700B7D708 /* WaterProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProjectTests.swift; sourceTree = "<group>"; };
 		AD9A0CBB2707A7B700B7D708 /* WaterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -477,12 +477,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y3NV8759Z7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WaterProject/Info.plist;
+				INFOPLIST_FILE = WaterProject/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,12 +506,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y3NV8759Z7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WaterProject/Info.plist;
+				INFOPLIST_FILE = WaterProject/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
