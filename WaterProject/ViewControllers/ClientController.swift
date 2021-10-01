@@ -10,6 +10,9 @@ import Foundation
 
 class ClientController: UIViewController {
 
+    @IBOutlet weak var clientTable: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,7 +25,7 @@ extension ClientController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return 
+        return
     }
     
     
