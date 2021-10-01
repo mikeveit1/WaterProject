@@ -8,16 +8,22 @@
 import UIKit
 
 class ClientTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var clientImage: UIImageView!
+    @IBOutlet weak var descriptionTitleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = .white
+        configureDescriptionTitleLabel()
+    }
+    
+    private func configureDescriptionTitleLabel() {
+        descriptionTitleLabel.text = "Description"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

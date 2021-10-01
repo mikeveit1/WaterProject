@@ -16,8 +16,13 @@ class ClientController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configureClientTable()
+    }
+    
+    private func configureClientTable() {
         clientTable.dataSource = self
         clientTable.delegate = self
+        clientTable.backgroundColor = .white
     }
 }
 
