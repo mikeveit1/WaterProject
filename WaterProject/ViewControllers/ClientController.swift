@@ -9,13 +9,10 @@ import UIKit
 import Foundation
 
 class ClientController: UIViewController {
-
     @IBOutlet weak var clientTable: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         configureClientTable()
     }
     
@@ -23,6 +20,7 @@ class ClientController: UIViewController {
         clientTable.dataSource = self
         clientTable.delegate = self
         clientTable.backgroundColor = .white
+        clientTable.rowHeight = UITableView.automaticDimension
     }
 }
 
@@ -32,7 +30,7 @@ extension ClientController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "clientCell", for: indexPath) as! ClientTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
         
         return cell
     }

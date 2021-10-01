@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4B6A5E2707B1D900A1C53B /* ClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B6A5D2707B1D900A1C53B /* ClientTableViewCell.swift */; };
 		AD9A0C9F2707A7AF00B7D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0C9E2707A7AF00B7D708 /* AppDelegate.swift */; };
 		AD9A0CA12707A7AF00B7D708 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CA02707A7AF00B7D708 /* SceneDelegate.swift */; };
 		AD9A0CA32707A7AF00B7D708 /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CA22707A7AF00B7D708 /* ClientController.swift */; };
@@ -16,7 +17,6 @@
 		AD9A0CB62707A7B700B7D708 /* WaterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CB52707A7B700B7D708 /* WaterProjectTests.swift */; };
 		AD9A0CC02707A7B700B7D708 /* WaterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CBF2707A7B700B7D708 /* WaterProjectUITests.swift */; };
 		AD9A0CC22707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CC12707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift */; };
-		AD9A0CD32707A9E200B7D708 /* ClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CD22707A9E200B7D708 /* ClientTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD4B6A5D2707B1D900A1C53B /* ClientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTableViewCell.swift; sourceTree = "<group>"; };
 		AD9A0C9B2707A7AF00B7D708 /* WaterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9A0C9E2707A7AF00B7D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9A0CA02707A7AF00B7D708 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		AD9A0CBB2707A7B700B7D708 /* WaterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9A0CBF2707A7B700B7D708 /* WaterProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProjectUITests.swift; sourceTree = "<group>"; };
 		AD9A0CC12707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AD9A0CD22707A9E200B7D708 /* ClientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 		AD9A0CD12707A9C600B7D708 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				AD9A0CD22707A9E200B7D708 /* ClientTableViewCell.swift */,
+				AD4B6A5D2707B1D900A1C53B /* ClientTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			files = (
 				AD9A0CA32707A7AF00B7D708 /* ClientController.swift in Sources */,
 				AD9A0C9F2707A7AF00B7D708 /* AppDelegate.swift in Sources */,
-				AD9A0CD32707A9E200B7D708 /* ClientTableViewCell.swift in Sources */,
+				AD4B6A5E2707B1D900A1C53B /* ClientTableViewCell.swift in Sources */,
 				AD9A0CA12707A7AF00B7D708 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
