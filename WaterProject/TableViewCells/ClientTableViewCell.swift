@@ -13,8 +13,13 @@ class ClientTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionTitleLabel: UILabel!
     @IBOutlet weak var clientDescriptionLabel: UILabel!
     @IBOutlet weak var amountRaisedLabel: UILabel!
-    private var labelColor: UIColor = .black
+    @IBOutlet weak var progressView: UIProgressView!
     public var amountRaised: Float!
+    private var labelColor: UIColor = .black
+    private var progressColor: UIColor = .purple
+    private var progressLabelColor: UIColor = .gray
+    @IBOutlet weak var progressStartLabel: UILabel!
+    @IBOutlet weak var progressEndLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +29,12 @@ class ClientTableViewCell: UITableViewCell {
         configureDescriptionTitleLabel()
         configureClientDescriptionLabel()
         configureAmountRaisedLabel()
+        configureProgressView()
     }
     
     private func configureClientImage() {
         clientImage.image = UIImage(named: "WaterProjectImage")
+        clientImage.contentMode = .scaleAspectFit
     }
     
     private func configureDescriptionTitleLabel() {
@@ -46,8 +53,27 @@ class ClientTableViewCell: UITableViewCell {
         let amountString = "$\(String(describing: amountRaised ?? 0)) raised"
         let range = (amountString as NSString).range(of: "$\(amountRaised ?? 0)")
         let attributedString = NSMutableAttributedString.init(string: amountString)
-        attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: "System Font Bold", size: 24.0)!, NSAttributedString.Key.foregroundColor: UIColor.purple], range: range)
+        attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: "System Font Bold", size: 24.0)!, NSAttributedString.Key.foregroundColor: progressColor], range: range)
         amountRaisedLabel.attributedText = attributedString
+    }
+    
+    private func configureProgressView() {
+        progressView.layer.cornerRadius = 16
+        progressView.clipsToBounds = true
+        progressView.progressTintColor = progressColor
+        progressView.trackTintColor = .white
+        progressView.layer.borderColor = progressLabelColor.cgColor
+        progressView.layer.borderWidth = 1.0
+        configureProgressStartAndEndLabels()
+    }
+    
+    private func configureProgressStartAndEndLabels() {
+        progressStartLabel.text = "0%"
+        progressEndLabel.text = "100%"
+        let labels = [progressStartLabel, progressEndLabel]
+        for label in labels {
+            label?.textColor = progressLabelColor
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
