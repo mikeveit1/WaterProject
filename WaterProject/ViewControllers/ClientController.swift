@@ -80,6 +80,4 @@ extension ClientController: UITableViewDelegate, UITableViewDataSource {
        cell.addDonation(donation: donationAmount)
         return cell
     }
-    
-    
 }

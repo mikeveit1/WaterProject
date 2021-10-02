@@ -28,8 +28,6 @@ class ClientTableViewCell: UITableViewCell {
         configureClientImage()
         configureDescriptionTitleLabel()
         configureClientDescriptionLabel()
-        configureAmountRaisedLabel()
-        configureProgressView()
     }
     
     public func addDonation(donation: Double) {
@@ -46,7 +44,7 @@ class ClientTableViewCell: UITableViewCell {
     private func configureDescriptionTitleLabel() {
         descriptionTitleLabel.text = "Description"
         descriptionTitleLabel.textColor = labelColor
-        descriptionTitleLabel.font = UIFont(name: "System Font Bold", size: 17.0)
+        descriptionTitleLabel.font = UIFont(name: Fonts.boldFontName, size: Fonts.regularFontSize)
     }
     
     private func configureClientDescriptionLabel() {
@@ -60,9 +58,9 @@ class ClientTableViewCell: UITableViewCell {
         numberFormatter.numberStyle = .currency
         let formattedAmountString = numberFormatter.string(from: NSNumber(value: amountRaised))
         let amountString = "\(formattedAmountString ?? "$0.00") raised"
-        let range = (amountString as NSString).range(of: formattedAmountString ?? "")
+        let range = (amountString as NSString).range(of: formattedAmountString ?? "$0.00")
         let attributedString = NSMutableAttributedString.init(string: amountString)
-        attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: "System Font Bold", size: 24.0)!, NSAttributedString.Key.foregroundColor: progressColor], range: range)
+        attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: Fonts.boldFontName, size: Fonts.largerFontSize)!, NSAttributedString.Key.foregroundColor: progressColor], range: range)
         amountRaisedLabel.attributedText = attributedString
     }
     
@@ -85,11 +83,4 @@ class ClientTableViewCell: UITableViewCell {
             label?.textColor = progressLabelColor
         }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
