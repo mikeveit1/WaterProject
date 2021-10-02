@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD4B6A5E2707B1D900A1C53B /* ClientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B6A5D2707B1D900A1C53B /* ClientTableViewCell.swift */; };
 		AD7072FF2707CE8800E3E1CC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7072FE2707CE8800E3E1CC /* Fonts.swift */; };
+		AD796C192707E39200E31CAE /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD796C182707E39200E31CAE /* CurrencyFormatter.swift */; };
 		AD9A0C9F2707A7AF00B7D708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0C9E2707A7AF00B7D708 /* AppDelegate.swift */; };
 		AD9A0CA12707A7AF00B7D708 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CA02707A7AF00B7D708 /* SceneDelegate.swift */; };
 		AD9A0CA32707A7AF00B7D708 /* ClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CA22707A7AF00B7D708 /* ClientController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		AD4B6A5D2707B1D900A1C53B /* ClientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTableViewCell.swift; sourceTree = "<group>"; };
 		AD7072FE2707CE8800E3E1CC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AD796C182707E39200E31CAE /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		AD9A0C9B2707A7AF00B7D708 /* WaterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9A0C9E2707A7AF00B7D708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9A0CA02707A7AF00B7D708 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		AD796C172707E38100E31CAE /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				AD796C182707E39200E31CAE /* CurrencyFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		AD9A0C922707A7AF00B7D708 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		AD9A0C9D2707A7AF00B7D708 /* WaterProject */ = {
 			isa = PBXGroup;
 			children = (
+				AD796C172707E38100E31CAE /* Formatters */,
 				AD7072FB2707CE7600E3E1CC /* Constants */,
 				AD9A0CD12707A9C600B7D708 /* TableViewCells */,
 				AD9A0CD02707A9A800B7D708 /* Storyboards */,
@@ -305,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9A0CA32707A7AF00B7D708 /* ClientController.swift in Sources */,
+				AD796C192707E39200E31CAE /* CurrencyFormatter.swift in Sources */,
 				AD9A0C9F2707A7AF00B7D708 /* AppDelegate.swift in Sources */,
 				AD4B6A5E2707B1D900A1C53B /* ClientTableViewCell.swift in Sources */,
 				AD7072FF2707CE8800E3E1CC /* Fonts.swift in Sources */,

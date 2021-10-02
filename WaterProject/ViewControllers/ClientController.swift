@@ -47,7 +47,7 @@ class ClientController: UIViewController {
         var donationString: String = ""
         let enterAmountController = UIAlertController(title: "Enter Donation", message: "Please enter the amount in dollars that you would like to donate.", preferredStyle: .alert)
         enterAmountController.addTextField(configurationHandler: {(textField) -> Void in
-            donationString = textField.text ?? ""
+            textField.placeholder = "$0.00"
             textField.keyboardType = .numberPad
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { _ in
@@ -76,7 +76,7 @@ extension ClientController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ClientTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "clientCell", for: indexPath) as! ClientTableViewCell
        cell.addDonation(donation: donationAmount)
         return cell
     }

@@ -54,11 +54,9 @@ class ClientTableViewCell: UITableViewCell {
     
     private func configureAmountRaisedLabel() {
         amountRaisedLabel.textColor = labelColor
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        let formattedAmountString = numberFormatter.string(from: NSNumber(value: amountRaised))
-        let amountString = "\(formattedAmountString ?? "$0.00") raised"
-        let range = (amountString as NSString).range(of: formattedAmountString ?? "$0.00")
+        let formattedAmountString = formatStringToCurrency(amount: amountRaised)
+        let amountString = "\(formattedAmountString) raised"
+        let range = (amountString as NSString).range(of: formattedAmountString)
         let attributedString = NSMutableAttributedString.init(string: amountString)
         attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: Fonts.boldFontName, size: Fonts.largerFontSize)!, NSAttributedString.Key.foregroundColor: progressColor], range: range)
         amountRaisedLabel.attributedText = attributedString
