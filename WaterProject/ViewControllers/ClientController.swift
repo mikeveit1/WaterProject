@@ -47,8 +47,9 @@ class ClientController: UIViewController {
         var donationString: String = ""
         let enterAmountController = UIAlertController(title: "Enter Donation", message: "Please enter the amount in dollars that you would like to donate.", preferredStyle: .alert)
         enterAmountController.addTextField(configurationHandler: {(textField) -> Void in
-            textField.placeholder = "$0.00"
+            textField.placeholder = currencyPlaceholder
             textField.keyboardType = .numberPad
+            textField.addTarget(self, action: #selector(self.textFieldChanged(_:)), for: .editingChanged)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { _ in
             enterAmountController.dismiss(animated: true, completion: nil)
@@ -56,12 +57,17 @@ class ClientController: UIViewController {
         enterAmountController.addAction(cancelAction)
         let donateAction = UIAlertAction(title: "Donate", style: .default) { _ in
             let textField = enterAmountController.textFields![0] as UITextField
-            donationString = textField.text!
-            self.donationAmount = Double(donationString) ?? 0
+            donationString = textField.text ?? ""
+            self.donationAmount = getDoubleFromCurrencyString(currencyString: donationString)
             self.clientTable.reloadData()
         }
         enterAmountController.addAction(donateAction)
         self.present(enterAmountController, animated: true, completion: nil)
+    }
+    
+    @objc func textFieldChanged(_ textField: UITextField) {
+        let amountString = formatStringInputToCurrency(input: textField.text ?? currencyPlaceholder)
+        textField.text = amountString
     }
     
     
@@ -77,7 +83,8 @@ extension ClientController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "clientCell", for: indexPath) as! ClientTableViewCell
-       cell.addDonation(donation: donationAmount)
+        cell.parentController = self
+        cell.addDonation(donation: donationAmount)
         return cell
     }
 }
