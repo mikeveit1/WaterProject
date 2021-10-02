@@ -14,20 +14,26 @@ class ClientTableViewCell: UITableViewCell {
     @IBOutlet weak var clientDescriptionLabel: UILabel!
     @IBOutlet weak var amountRaisedLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    public var amountRaised: Float!
+    @IBOutlet weak var progressStartLabel: UILabel!
+    @IBOutlet weak var progressEndLabel: UILabel!
     private var labelColor: UIColor = .black
     private var progressColor: UIColor = .purple
     private var progressLabelColor: UIColor = .gray
-    @IBOutlet weak var progressStartLabel: UILabel!
-    @IBOutlet weak var progressEndLabel: UILabel!
+    private let goalAmount: Double = 5000.00
+    private var amountRaised: Double = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .white
-        amountRaised = 1158.00
         configureClientImage()
         configureDescriptionTitleLabel()
         configureClientDescriptionLabel()
+        configureAmountRaisedLabel()
+        configureProgressView()
+    }
+    
+    public func addDonation(donation: Double) {
+        self.amountRaised += donation
         configureAmountRaisedLabel()
         configureProgressView()
     }
@@ -50,14 +56,15 @@ class ClientTableViewCell: UITableViewCell {
     
     private func configureAmountRaisedLabel() {
         amountRaisedLabel.textColor = labelColor
-        let amountString = "$\(String(describing: amountRaised ?? 0)) raised"
-        let range = (amountString as NSString).range(of: "$\(amountRaised ?? 0)")
+        let amountString = "$\(amountRaised) raised"
+        let range = (amountString as NSString).range(of: "$\(amountRaised)")
         let attributedString = NSMutableAttributedString.init(string: amountString)
         attributedString.addAttributes([NSAttributedString.Key.font: UIFont(name: "System Font Bold", size: 24.0)!, NSAttributedString.Key.foregroundColor: progressColor], range: range)
         amountRaisedLabel.attributedText = attributedString
     }
     
     private func configureProgressView() {
+        progressView.progress = Float(amountRaised / goalAmount)
         progressView.layer.cornerRadius = 16
         progressView.clipsToBounds = true
         progressView.progressTintColor = progressColor
