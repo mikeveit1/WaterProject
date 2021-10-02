@@ -71,7 +71,7 @@ class ClientTableViewCell: UITableViewCell {
         progressView.progressTintColor = progressColor
         progressView.trackTintColor = .white
         progressView.layer.borderColor = progressLabelColor.cgColor
-        progressView.layer.borderWidth = 1.0
+        progressView.layer.borderWidth = 1
         configureProgressStartAndEndLabels()
     }
     
