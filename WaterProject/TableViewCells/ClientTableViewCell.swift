@@ -49,7 +49,7 @@ class ClientTableViewCell: UITableViewCell {
     }
     
     private func configureClientDescriptionLabel() {
-        clientDescriptionLabel.text = "Every year middle class American families put off traveling because they're too busy or too tired or they just don't have enough money. And, in some ways, they're right. Traveling can be expensive. But by taking the time to learn about the discounts readily available to everyone through the internet, you can take a trip for super cheap."
+        clientDescriptionLabel.text = "The water crisis is a health crisis. Nearly 1 million people die each year from water, sanitation and hygiene-related diseases which could be reduced with access to safe water or sanitation. Every 2 minutes a child dies from a water-related disease. Access to safe water and sanitation contributes to improved health and helps prevent the spread of infectious disease. It means reduced child and maternal mortality rates. It means reduced physical injury from constant lifting and carrying heavy loads of water. Now more than ever, access to safe water is critical to the health of families around the world."
         clientDescriptionLabel.textColor = .black
     }
     
