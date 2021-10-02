@@ -13,7 +13,7 @@ class ClientController: UIViewController {
     @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var giveNowButton: UIButton!
     private var backgroundColor: UIColor = .white
-    internal var donationAmount: Double = 0
+    private var donationAmount: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
