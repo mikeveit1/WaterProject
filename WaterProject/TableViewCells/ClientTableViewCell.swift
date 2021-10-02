@@ -21,6 +21,7 @@ class ClientTableViewCell: UITableViewCell {
     private var progressLabelColor: UIColor = .gray
     private let goalAmount: Double = 5000.00
     private var amountRaised: Double = 0
+    public var parentController: UIViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,6 +72,18 @@ class ClientTableViewCell: UITableViewCell {
         progressView.layer.borderColor = progressLabelColor.cgColor
         progressView.layer.borderWidth = 1
         configureProgressStartAndEndLabels()
+        if progressView.progress == 1 {
+            presentSuccessMessage()
+        }
+    }
+    
+    private func presentSuccessMessage() {
+        let successController = UIAlertController(title: "Success!", message: "We have reached our donation goal. Thank you!", preferredStyle: .alert)
+        let doneAction = UIAlertAction(title: "OK", style: .default) { _ in
+            successController.dismiss(animated: true, completion: nil)
+        }
+        successController.addAction(doneAction)
+        parentController.present(successController, animated: true, completion: nil)
     }
     
     private func configureProgressStartAndEndLabels() {
