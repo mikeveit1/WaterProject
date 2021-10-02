@@ -72,13 +72,24 @@ class ClientTableViewCell: UITableViewCell {
         progressView.layer.borderColor = progressLabelColor.cgColor
         progressView.layer.borderWidth = 1
         configureProgressStartAndEndLabels()
-        if progressView.progress == 1 {
-            presentSuccessMessage()
+        if progressView.progress > 0 && progressView.progress < 1 {
+            presentSuccessMessage(goalReached: false)
+        } else if progressView.progress == 1 {
+            presentSuccessMessage(goalReached: true)
         }
     }
     
-    private func presentSuccessMessage() {
-        let successController = UIAlertController(title: "Success!", message: "We have reached our donation goal. Thank you!", preferredStyle: .alert)
+    private func presentSuccessMessage(goalReached: Bool) {
+        var message = String()
+        var title = String()
+        if goalReached {
+            title = "We did it!"
+            message = "We have reached our donation goal. Thank you!"
+        } else {
+            title = "Success!"
+            message = "Your donation has been received. Thank you!"
+        }
+        let successController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let doneAction = UIAlertAction(title: "OK", style: .default) { _ in
             successController.dismiss(animated: true, completion: nil)
         }
