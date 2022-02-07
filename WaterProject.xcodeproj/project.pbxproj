@@ -19,6 +19,8 @@
 		AD9A0CB62707A7B700B7D708 /* WaterProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CB52707A7B700B7D708 /* WaterProjectTests.swift */; };
 		AD9A0CC02707A7B700B7D708 /* WaterProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CBF2707A7B700B7D708 /* WaterProjectUITests.swift */; };
 		AD9A0CC22707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A0CC12707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift */; };
+		E4A6DB6427B179C700B5CDE9 /* WaterProject-Mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A6DB6327B179C700B5CDE9 /* WaterProject-Mockup.png */; };
+		E4A6DB6627B17BD500B5CDE9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E4A6DB6527B17BD500B5CDE9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		AD9A0CBB2707A7B700B7D708 /* WaterProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9A0CBF2707A7B700B7D708 /* WaterProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProjectUITests.swift; sourceTree = "<group>"; };
 		AD9A0CC12707A7B700B7D708 /* WaterProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4A6DB6327B179C700B5CDE9 /* WaterProject-Mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WaterProject-Mockup.png"; path = "../../Downloads/WaterProject-Mockup.png"; sourceTree = "<group>"; };
+		E4A6DB6527B17BD500B5CDE9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		AD9A0C922707A7AF00B7D708 = {
 			isa = PBXGroup;
 			children = (
+				E4A6DB6527B17BD500B5CDE9 /* README.md */,
+				E4A6DB6327B179C700B5CDE9 /* WaterProject-Mockup.png */,
 				AD9A0C9D2707A7AF00B7D708 /* WaterProject */,
 				AD9A0CB42707A7B700B7D708 /* WaterProjectTests */,
 				AD9A0CBE2707A7B700B7D708 /* WaterProjectUITests */,
@@ -288,9 +294,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A6DB6427B179C700B5CDE9 /* WaterProject-Mockup.png in Resources */,
 				AD9A0CAB2707A7B600B7D708 /* LaunchScreen.storyboard in Resources */,
 				AD9A0CA82707A7B600B7D708 /* Assets.xcassets in Resources */,
 				AD9A0CA62707A7AF00B7D708 /* Main.storyboard in Resources */,
+				E4A6DB6627B17BD500B5CDE9 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y3NV8759Z7;
+				DEVELOPMENT_TEAM = HRR73Q9W36;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterProject/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
